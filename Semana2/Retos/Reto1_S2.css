@@ -1,0 +1,25 @@
+header{
+  text-align: center;
+  font-family: Arial;
+}
+section{
+  text-align: center;
+  font-family: 'Arial';
+}
+input{
+  text-align: left;
+  font-family: 'Arial';
+  height: 50px;
+  width: 300px
+}
+
+#boton{
+  text-align: center;
+  font-size: 17px;
+  font-family: monospace;
+  font-weight: bolder;
+  height: 40px;
+  width: 120px;
+  background-color: mediumseagreen;
+  color: white;
+}
