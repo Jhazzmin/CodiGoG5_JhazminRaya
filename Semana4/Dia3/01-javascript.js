@@ -61,5 +61,4 @@ var infinito = 100/0;
 
 console.log(infinito);
 
-
 console.log(typeof infinito);
