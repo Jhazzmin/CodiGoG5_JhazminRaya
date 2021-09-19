@@ -22,3 +22,6 @@ console.log("Multiplicación",multiplicacion);
 
 let division = a/b;
 console.log("División", division);
+
+let residuo = a%b;
+console.log("Residuo o Modulo",residuo);
