@@ -1,0 +1,20 @@
+
+.cuadros{
+  display: grid;
+  grid-template-columns: 50% 50%
+  
+}
+
+.cuadrado{
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px lightgray;
+} 
+
+.cuadrado:nth-of-type(1) {
+  background-image: linear-gradient(45deg, #3dada4, #c71fe6);
+  border: #3dada4;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
