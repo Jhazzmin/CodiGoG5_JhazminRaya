@@ -77,3 +77,37 @@ function Mostrar() {
 }
 
 btnVer.addEventListener("click", Mostrar);
+
+
+//Capturar eventos
+
+let irAGoogle = document.createElement("a");
+
+irAGoogle.setAttribute("href","https://google.com");
+
+irAGoogle.innerText = "Llevame a Google";
+
+divContenido.appendChild(irAGoogle);
+
+////---
+//previene la accion por defecto por un evento preventDefault()
+irAGoogle.addEventListener("click",function(evento){
+    evento.preventDefault();
+    console.log(evento);
+})
+
+//Capturar primero el formulario
+let miFormulario = document.getElementById("formulario");
+
+//submit, es la accion de enviar datos
+miFormulario.addEventListener("submit",function(evento){
+    evento.preventDefault();
+    console.log("Submit!!");
+    //vamos a hacer envio de datos en JavaScript
+    let nuevoUsuario = {
+        //formularui.nombre_input.value
+        nombres: miFormulario.nombres.value,
+        apellidos: miFormulario.apellidos.value,
+    };
+    console.log(nuevoUsuario);
+})
