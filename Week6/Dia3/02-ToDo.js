@@ -30,11 +30,22 @@ formToDo.addEventListener("submit", function(ev){
 });
 
 function dibujarTareas(){
+  //cada vez que se ejecute dibujarTareas lo primero
+  //que hago es decir que el contenido HTML va a ser "" nada 
   ulTareas.innerHTML="";
   //se va a encargar de dibujar las tareas
-  tareas.forEach(function(item){
+  tareas.forEach(function(item, posicion){
     let li = document.createElement("li");
     li.innerHTML = item;
     ulTareas.appendChild(li);
+
+    //Agregar 01 evento por cada item
+    li.addEventListener("dblclick", function(){
+      //la idea es que esto nos permita eliminar una tarea
+      tareas.splice(posicion, 1); //splice(posicion actual, cantidad a eliminar)
+      //console.log("despues de eliminar", tareas);
+
+      dibujarTareas();
+    })
   })
 }
