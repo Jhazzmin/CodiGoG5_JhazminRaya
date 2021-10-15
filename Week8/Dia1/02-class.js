@@ -18,12 +18,21 @@ class Pokemon{
     this.Ataque = ataque;
     this.Defensa = defensa;
     this.PuntosVida = puntosvida;
+    //1ero se construye
+    //2do ejecuta lo que le ponga despues 
+    this.aparecer();
+  }
+  aparecer(){
+    console.log(`Un ${this.Nombre} salvaje aparecio`);
+  }
+  atacar(){
+    console.log(`${this.Nombre} ataca con ${this.Ataque}`);
   }
 }
+//instancia
+let pokemon1 = new Pokemon("Pikachu","Electrico",30,20,60);
 
-let pokemon1 = new Pokemon("Pikachu");
+let pokemon2 = new Pokemon("Dragonite","Dragon",70,80,120);
 
-let pokemon2 = new Pokemon("Dragonite");
-
-console.log(pokemon1);
-console.log(pokemon2);
+console.log(pokemon1.Tipo);
+console.log(pokemon2.atacar());
